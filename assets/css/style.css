@@ -5,7 +5,9 @@ body {
     font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
 }
-
+.prompt-wrapper {
+    display: none; /* Start hidden */
+}
 /* Focus state style for keyboard navigation for the focusable elements */
 *[tabindex]:focus-visible,
 input[type="file"]:focus-visible {

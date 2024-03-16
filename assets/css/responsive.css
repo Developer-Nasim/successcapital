@@ -1,5 +1,5 @@
  
-            html {
+html {
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
     font-family: sans-serif
@@ -8,7 +8,13 @@
 body {
     margin: 0
 }
-
+.changeImgColor,
+.faq_question-wrapper img.faq_question-icon{
+    filter: hue-rotate(127deg);
+}
+.faq_accordion:hover .faq6_icon-wrapper svg{
+    color: var(--base-color-brand--green) !important;
+}
 article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary {
     display: block
 }
@@ -2126,21 +2132,21 @@ textarea.w-input,textarea.w-select {
     --white: white;
     --border-color--border-secondary: var(--base-color-brand--green);
     --base-color-neutral--neutral-light: #aaa;
-    --base-color-brand--green-light: #3cc93c;
-    --base-color-brand--green: #00e700;
+    --base-color-brand--green-light: #03A9F4;
+    --base-color-brand--green: #03A9F4;
     --base-color-brand--blue-dark: #080331;
     --base-color-brand--blue: #0072ef;
     --base-color-neutral--black: #000;
     --base-color-neutral--neutral-lightest: #eee;
     --base-color-neutral--neutral-lighter: #ccc;
     --base-color-system--success-green: #cef5ca;
-    --base-color-system--success-green-dark: #114e0b;
+    --base-color-system--success-green-dark: #0c3e55;
     --base-color-system--warning-yellow: #fcf8d8;
-    --base-color-system--warning-yellow-dark: #5e5515;
+    --base-color-system--warning-yellow-dark: #0a3151;
     --base-color-system--error-red: #f8e4e4;
     --base-color-system--error-red-dark: #3b0b0b;
     --base-color-system--focus-state: #2d62ff;
-    --black: black
+    --black: black;
 }
 
 .w-layout-grid {
@@ -3187,7 +3193,7 @@ figcaption {
 
 .button:hover {
     transform: scale(1.05);
-    box-shadow: 0 9px 20px rgba(0,231,0,.25)
+    box-shadow: 0 9px 20px rgba(0, 146, 231, 0.25)
 }
 
 .button.is-text {
@@ -3280,7 +3286,7 @@ figcaption {
 }
 
 .button.is-brand:hover {
-    box-shadow: 0 9px 20px rgba(255,255,255,.2)
+    box-shadow: 0 9px 20px rgb(255 255 255 / 20%)
 }
 
 .button.is-pricing {
@@ -3294,7 +3300,7 @@ figcaption {
 }
 
 .button.is-pricing:hover {
-    box-shadow: 0 11px 35px rgba(255,255,255,.2)
+    box-shadow: 0 11px 35px rgb(255 255 255 / 20%)
 }
 
 .button.is-prompt-cta {
@@ -4147,7 +4153,7 @@ figcaption {
 .system_title-graphic_back {
     width: 18.9rem;
     height: .25rem;
-    background-image: linear-gradient(90deg,#00e700,rgba(0,231,0,0));
+    background-image: linear-gradient(90deg,var(--link-color--link-primary),rgba(0,231,0,0));
     border-radius: 1rem;
     flex-direction: column;
     justify-content: center;
@@ -4783,7 +4789,9 @@ figcaption {
 }
 
 .pricing_plan-margin {
-    margin-top: -18.2rem
+    margin-top: -18.2rem;
+    position:relative;
+    z-index: 2;
 }
 
 .pricing_plan-grid {
@@ -4921,9 +4929,14 @@ figcaption {
 
 .pricing_decide-cta:hover {
     transform: matrix(1.03,0,0,1.03,0,-10);
-    box-shadow: inset 0 0 20px 10px rgba(0,231,0,.15),0 8px 20px 7px rgba(0,231,0,.15)
+    box-shadow: inset 0 0 20px 10px rgba(0, 146, 231, 0.15),0 8px 20px 7px rgba(0, 146, 231, 0.15)
 }
-
+a#w-node-_0cd1e570-4a09-9ddc-41f1-6f517102389d-f583046a p{
+    transition: .3s;
+}
+a#w-node-_0cd1e570-4a09-9ddc-41f1-6f517102389d-f583046a:hover p.pricing_decide-cta_content-title{
+    color: var(--base-color-brand--green) !important;
+}
 .pricing_decide-cta.is-secondary {
     border: 2px dashed var(--base-color-neutral--neutral-dark);
     color: var(--link-color--link-alternate)
