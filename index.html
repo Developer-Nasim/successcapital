@@ -13,7 +13,8 @@
         <meta property="og:type" content="website" />
         <meta content="summary_large_image" name="twitter:card" />
         <meta content="width=device-width, initial-scale=1" name="viewport" />
-        <link href="https://assets-global.website-files.com/65bb13407635bdf5ce9f1131/css/wifi-uni-reforged.webflow.f39bd6cba.min.css" rel="stylesheet" type="text/css" />
+        <link href="assets/css/responsive.css" rel="stylesheet" type="text/css" />
+        <link href="assets/css/style.css" rel="stylesheet" type="text/css" />
         <link href="https://fonts.googleapis.com" rel="preconnect" />
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous" />
         <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script>
@@ -39,313 +40,8 @@
   
 
         <script src="https://assets-global.website-files.com/65bb13407635bdf5ce9f1131%2F652d31f3dc22d7b4ee708e44%2F65f2cb6d4327feaefdabbc83%2Fclarity_script-6.3.3.js" type="text/javascript"></script>
-        <style>
-            /* Make text look crisper and more legible in all browsers */
-            body {
-                -webkit-font-smoothing: antialiased;
-                -moz-osx-font-smoothing: grayscale;
-                font-smoothing: antialiased;
-                text-rendering: optimizeLegibility;
-            }
-
-            /* Focus state style for keyboard navigation for the focusable elements */
-            *[tabindex]:focus-visible,
-            input[type="file"]:focus-visible {
-                outline: 0.125rem solid #4d65ff;
-                outline-offset: 0.125rem;
-            }
-
-            /* Set color style to inherit */
-            .inherit-color * {
-                color: inherit;
-            }
-
-            /* Get rid of top margin on first element in any rich text element */
-            .w-richtext > :not(div):first-child,
-            .w-richtext > div:first-child > :first-child {
-                margin-top: 0 !important;
-            }
-
-            /* Get rid of bottom margin on last element in any rich text element */
-            .w-richtext > :last-child,
-            .w-richtext ol li:last-child,
-            .w-richtext ul li:last-child {
-                margin-bottom: 0 !important;
-            }
-
-            /* Make sure containers never lose their center alignment */
-            .container-medium,
-            .container-small,
-            .container-large {
-                margin-right: auto !important;
-                margin-left: auto !important;
-            }
-
-            /* 
-Make the following elements inherit typography styles from the parent and not have hardcoded values. 
-Important: You will not be able to style for example "All Links" in Designer with this CSS applied.
-Uncomment this CSS to use it in the project. Leave this message for future hand-off.
-*/
-            /*
-a,
-.w-input,
-.w-select,
-.w-tab-link,
-.w-nav-link,
-.w-dropdown-btn,
-.w-dropdown-toggle,
-.w-dropdown-link {
-color: inherit;
-text-decoration: inherit;
-font-size: inherit;
-}
-*/
-
-            /* Apply "..." after 3 lines of text */
-            .text-style-3lines {
-                display: -webkit-box;
-                overflow: hidden;
-                -webkit-line-clamp: 3;
-                -webkit-box-orient: vertical;
-            }
-
-            /* Apply "..." after 2 lines of text */
-            .text-style-2lines {
-                display: -webkit-box;
-                overflow: hidden;
-                -webkit-line-clamp: 2;
-                -webkit-box-orient: vertical;
-            }
-
-            /* Adds inline flex display */
-            .display-inlineflex {
-                display: inline-flex;
-            }
-
-            /* These classes are never overwritten */
-            .hide {
-                display: none !important;
-            }
-
-            @media screen and (max-width: 991px) {
-                .hide,
-                .hide-tablet {
-                    display: none !important;
-                }
-            }
-            @media screen and (max-width: 767px) {
-                .hide-mobile-landscape {
-                    display: none !important;
-                }
-            }
-            @media screen and (max-width: 479px) {
-                .hide-mobile {
-                    display: none !important;
-                }
-            }
-
-            .margin-0 {
-                margin: 0rem !important;
-            }
-
-            .padding-0 {
-                padding: 0rem !important;
-            }
-
-            .spacing-clean {
-                padding: 0rem !important;
-                margin: 0rem !important;
-            }
-
-            .margin-top {
-                margin-right: 0rem !important;
-                margin-bottom: 0rem !important;
-                margin-left: 0rem !important;
-            }
-
-            .padding-top {
-                padding-right: 0rem !important;
-                padding-bottom: 0rem !important;
-                padding-left: 0rem !important;
-            }
-
-            .margin-right {
-                margin-top: 0rem !important;
-                margin-bottom: 0rem !important;
-                margin-left: 0rem !important;
-            }
-
-            .padding-right {
-                padding-top: 0rem !important;
-                padding-bottom: 0rem !important;
-                padding-left: 0rem !important;
-            }
-
-            .margin-bottom {
-                margin-top: 0rem !important;
-                margin-right: 0rem !important;
-                margin-left: 0rem !important;
-            }
-
-            .padding-bottom {
-                padding-top: 0rem !important;
-                padding-right: 0rem !important;
-                padding-left: 0rem !important;
-            }
-
-            .margin-left {
-                margin-top: 0rem !important;
-                margin-right: 0rem !important;
-                margin-bottom: 0rem !important;
-            }
-
-            .padding-left {
-                padding-top: 0rem !important;
-                padding-right: 0rem !important;
-                padding-bottom: 0rem !important;
-            }
-
-            .margin-horizontal {
-                margin-top: 0rem !important;
-                margin-bottom: 0rem !important;
-            }
-
-            .padding-horizontal {
-                padding-top: 0rem !important;
-                padding-bottom: 0rem !important;
-            }
-
-            .margin-vertical {
-                margin-right: 0rem !important;
-                margin-left: 0rem !important;
-            }
-
-            .padding-vertical {
-                padding-right: 0rem !important;
-                padding-left: 0rem !important;
-            }
-
-            @media only screen and (max-width: 359px) {
-                .screen-limit {
-                    display: flex !important;
-                }
-            }
-
-            html {
-                background: black !important;
-            }
-
-            body {
-                overflow-x: hidden !important;
-            }
-
-            /* Slide in from left */
-            @keyframes slideInLeft {
-                from {
-                    transform: translateX(-100%);
-                    opacity: 0;
-                }
-                to {
-                    transform: translateX(0);
-                    opacity: 1;
-                }
-            }
-
-            /* Slide out to left */
-            @keyframes slideOutLeft {
-                from {
-                    transform: translateX(0);
-                    opacity: 1;
-                }
-                to {
-                    transform: translateX(-100%);
-                    opacity: 0;
-                }
-            }
-
-            .prompt-wrapper {
-                animation-duration: 0.5s; /* Animation duration */
-                animation-fill-mode: both; /* Maintain the final state after animation */
-            }
-
-            /* Additional classes to control the animations */
-            .slide-in {
-                animation-name: slideInLeft;
-            }
-
-            .slide-out {
-                animation-name: slideOutLeft;
-            }
-
-            .marquee_item.active {
-                color: white !important;
-            }
-
-            @media (max-width: 479px) and (min-width: 335px) {
-                .button.is-brand {
-                    padding-left: 1rem !important;
-                    padding-right: 0.75rem !important;
-                }
-            }
-
-            @media (max-width: 380px) {
-                .benefit_norisk-grid {
-                    display: flex; /* Enables flexbox */
-                    flex-direction: column; /* Stacks the flex items vertically */
-                    align-items: center; /* Centers the flex items vertically in the container */
-                    justify-content: center; /* If you also want to center the items horizontally */
-                }
-            }
-
-            .congrats-reward-mail {
-                overflow: hidden !important;
-                text-overflow: ellipsis !important;
-                white-space: nowrap !important;
-                display: block !important;
-                max-width: 40rem !important;
-            }
-
-            .congrats-reward-wrapper {
-                max-width: 100% !important;
-                box-sizing: border-box !important;
-                display: flex !important;
-                overflow: hidden !important; /* Ensure the wrapper doesn't exceed its parent container */
-            }
-
-            /* Default max-width for viewports wider than 991px */
-            .congrats-reward-mail {
-                max-width: 100%; /* Adjust this value as needed for larger screens */
-            }
-
-            /* When viewport width is between 991px and 768px */
-            @media (max-width: 991px) and (min-width: 768px) {
-                .congrats-reward-mail {
-                    max-width: 35rem !important;
-                }
-            }
-
-            /* When viewport width is between 767px and 480px */
-            @media (max-width: 767px) and (min-width: 480px) {
-                .congrats-reward-mail {
-                    max-width: 23rem !important;
-                }
-            }
-
-            /* When viewport width is below 480px */
-            @media (max-width: 479px) {
-                .congrats-reward-mail {
-                    max-width: 17rem !important;
-                }
-            }
-
-            .is-force-opacity-0 {
-                opacity: 0 !important;
-            }
-
-            .header-marquee_item-wrapper {
-                will-change: transform; /* Improve performance for animations */
-            }
-        </style>
+      
+         
     </head>
     <body>
 
@@ -2318,120 +2014,52 @@ font-size: inherit;
                                         </div>
                                     </div> -->
                                     <!-- <div class="spacer-xhuge"></div> -->
-                                    <div class="grid-component">
-                                        <div id="w-node-_162be8bf-99e9-c858-3b02-8eb0f5830525-f583046a" class="benefit_norisk_left">
-                                            <div class="margin-bottom margin-xmedium display-inlineflex">
-                                                <div class="tagline-wrapper">
-                                                    <div class="tagline-dot"></div>
-                                                    <p>Here’s The Best Part</p>
+                               
+
+                                    
+                                    <div class="margin-bottom margin-xlarge">
+                                        <div class="title-grid is-system-section padding-horizontal padding-small">
+                                            <div id="w-node-_2b6303c5-5c34-64c6-d8da-3e5577df8e7a-f583046a" class="title-relative-wrapper">
+                                                <div
+                                                    class="system_title-lottie"
+                                                    data-w-id="2b6303c5-5c34-64c6-d8da-3e5577df8e7b"
+                                                    data-animation-type="lottie"
+                                                    data-src="https://assets-global.website-files.com/65bb13407635bdf5ce9f1131/65bcc00a110f3f1370d56749_Money%20bag.json"
+                                                    data-loop="1"
+                                                    data-direction="1"
+                                                    data-autoplay="1"
+                                                    data-is-ix2-target="0"
+                                                    data-renderer="svg"
+                                                    data-default-duration="3"
+                                                    data-duration="0"
+                                                ></div>
+                                                <div class="system_title-graphic_front"></div>
+                                                <div class="system_title-graphic_back"></div>
+                                                <div class="system_title-graphic_num-wrapper">
+                                                    <p id="w-node-_2b6303c5-5c34-64c6-d8da-3e5577df8e7f-f583046a" class="system_title-graphic_num">Daily</p>
+                                                    <p id="w-node-_2b6303c5-5c34-64c6-d8da-3e5577df8e81-f583046a" class="system_title-graphic_num">Weekly</p>
+                                                    <p id="w-node-_2b6303c5-5c34-64c6-d8da-3e5577df8e83-f583046a" class="system_title-graphic_num">Monthly</p>
+                                                    <p id="w-node-_2b6303c5-5c34-64c6-d8da-3e5577df8e85-f583046a" class="system_title-graphic_num">Yearly</p>
                                                 </div>
+                                                <h2 class="section-title">
+                                                    Copy One System<br />
+                                                    <span class="system_title-span_lottie"> </span>Earn Forever<br />
+                                                    <span class="system_title-span_visual"> </span><span class="heading-highlight">1,246</span><br />
+                                                </h2>
                                             </div>
-                                            <div class="heading-best-wrapper margin-bottom margin-large"><h4>You Don’t Need To Risk Anything With WiFi Systems</h4></div>
-                                            <div class="benefit_norisk-grid">
-                                                <div id="w-node-_162be8bf-99e9-c858-3b02-8eb0f583052f-f583046a" class="benefit_norisk-item">
-                                                    <div class="icon-embed-xsmall text-color-brand w-embed">
-                                                        <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" preserveAspectRatio="xMidYMid meet" aria-hidden="true" role="img">
-                                                            <path
-                                                                d="M18.4449 6.8375C18.8266 6.45579 18.8266 5.83693 18.4449 5.45522C18.0632 5.07352 17.4443 5.07352 17.0626 5.45522L11.8893 10.6286L6.71592 5.45522C6.33421 5.07352 5.71535 5.07352 5.33364 5.45522C4.95194 5.83693 4.95194 6.45579 5.33364 6.8375L10.507 12.0109L5.33364 17.1842C4.95194 17.5659 4.95194 18.1848 5.33364 18.5665C5.71535 18.9482 6.33421 18.9482 6.71592 18.5665L11.8893 13.3931L17.0626 18.5665C17.4443 18.9482 18.0632 18.9482 18.4449 18.5665C18.8266 18.1848 18.8266 17.5659 18.4449 17.1842L13.2715 12.0109L18.4449 6.8375Z"
-                                                                fill="currentColor"
-                                                            />
-                                                        </svg>
-                                                    </div>
-                                                    <p>No Face Reveal</p>
-                                                </div>
-                                                <div id="w-node-_162be8bf-99e9-c858-3b02-8eb0f5830533-f583046a" class="benefit_norisk-item">
-                                                    <div class="icon-embed-xsmall text-color-brand w-embed">
-                                                        <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" preserveAspectRatio="xMidYMid meet" aria-hidden="true" role="img">
-                                                            <path
-                                                                d="M18.4449 6.8375C18.8266 6.45579 18.8266 5.83693 18.4449 5.45522C18.0632 5.07352 17.4443 5.07352 17.0626 5.45522L11.8893 10.6286L6.71592 5.45522C6.33421 5.07352 5.71535 5.07352 5.33364 5.45522C4.95194 5.83693 4.95194 6.45579 5.33364 6.8375L10.507 12.0109L5.33364 17.1842C4.95194 17.5659 4.95194 18.1848 5.33364 18.5665C5.71535 18.9482 6.33421 18.9482 6.71592 18.5665L11.8893 13.3931L17.0626 18.5665C17.4443 18.9482 18.0632 18.9482 18.4449 18.5665C18.8266 18.1848 18.8266 17.5659 18.4449 17.1842L13.2715 12.0109L18.4449 6.8375Z"
-                                                                fill="currentColor"
-                                                            />
-                                                        </svg>
-                                                    </div>
-                                                    <p>No Big Investment</p>
-                                                </div>
-                                                <div id="w-node-_162be8bf-99e9-c858-3b02-8eb0f5830537-f583046a" class="benefit_norisk-item">
-                                                    <div class="icon-embed-xsmall text-color-brand w-embed">
-                                                        <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" preserveAspectRatio="xMidYMid meet" aria-hidden="true" role="img">
-                                                            <path
-                                                                d="M18.4449 6.8375C18.8266 6.45579 18.8266 5.83693 18.4449 5.45522C18.0632 5.07352 17.4443 5.07352 17.0626 5.45522L11.8893 10.6286L6.71592 5.45522C6.33421 5.07352 5.71535 5.07352 5.33364 5.45522C4.95194 5.83693 4.95194 6.45579 5.33364 6.8375L10.507 12.0109L5.33364 17.1842C4.95194 17.5659 4.95194 18.1848 5.33364 18.5665C5.71535 18.9482 6.33421 18.9482 6.71592 18.5665L11.8893 13.3931L17.0626 18.5665C17.4443 18.9482 18.0632 18.9482 18.4449 18.5665C18.8266 18.1848 18.8266 17.5659 18.4449 17.1842L13.2715 12.0109L18.4449 6.8375Z"
-                                                                fill="currentColor"
-                                                            />
-                                                        </svg>
-                                                    </div>
-                                                    <p>No Experience</p>
-                                                </div>
-                                                <div id="w-node-_162be8bf-99e9-c858-3b02-8eb0f583053b-f583046a" class="benefit_norisk-item">
-                                                    <div class="icon-embed-xsmall text-color-brand w-embed">
-                                                        <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" preserveAspectRatio="xMidYMid meet" aria-hidden="true" role="img">
-                                                            <path
-                                                                d="M18.4449 6.8375C18.8266 6.45579 18.8266 5.83693 18.4449 5.45522C18.0632 5.07352 17.4443 5.07352 17.0626 5.45522L11.8893 10.6286L6.71592 5.45522C6.33421 5.07352 5.71535 5.07352 5.33364 5.45522C4.95194 5.83693 4.95194 6.45579 5.33364 6.8375L10.507 12.0109L5.33364 17.1842C4.95194 17.5659 4.95194 18.1848 5.33364 18.5665C5.71535 18.9482 6.33421 18.9482 6.71592 18.5665L11.8893 13.3931L17.0626 18.5665C17.4443 18.9482 18.0632 18.9482 18.4449 18.5665C18.8266 18.1848 18.8266 17.5659 18.4449 17.1842L13.2715 12.0109L18.4449 6.8375Z"
-                                                                fill="currentColor"
-                                                            />
-                                                        </svg>
-                                                    </div>
-                                                    <p>No Hard Work</p>
-                                                </div>
+                                            <div id="w-node-_2b6303c5-5c34-64c6-d8da-3e5577df8e94-f583046a" class="system_title-description-block">
+                                                <p>
+                                                    Here&#x27;s a chance you never want to miss — once-in-a-lifetime opportunity to achieve your dreams without any risk. At Success Capital,
+                                                    <span class="text-highlight">we&#x27;ve got 41+ different systems ready for you, and we&#x27;re constantly adding more innovative ones.</span> Each system is designed for easy use, smooth
+                                                    automation, and consistent earning.
+                                                </p>
                                             </div>
-                                            <div class="benefit_mid_cta-wrapper">
-                                                <div class="margin-bottom margin-12px">
-                                                    <a href="https://portal.wifiuniversity.co/offers/t9XmPrFG" class="button is-icon is-cta w-inline-block">
-                                                        <div>start your automation</div>
-                                                        <div class="icon-1x1-small w-embed">
-                                                            <svg aria-hidden="true" fill="currentColor" role="img" viewBox="0 0 56 56" xmlns="http://www.w3.org/2000/svg">
-                                                                <title>Arrow Right</title>
-                                                                <path
-                                                                    d="M16.0618 13.9785C14.7938 13.9785 13.7659 15.0064 13.7659 16.2745C13.7659 17.5425 14.7938 18.5704 16.0618 18.5704H33.4783L14.4383 37.6104C13.5417 38.507 13.5417 39.9607 14.4383 40.8573C15.335 41.7539 16.7887 41.7539 17.6853 40.8573L36.7252 21.8173V39.2338C36.7252 40.5018 37.7532 41.5298 39.0212 41.5298C40.2892 41.5298 41.3171 40.5018 41.3171 39.2338V16.2745C41.3171 15.0064 40.2892 13.9785 39.0212 13.9785H16.0618Z"
-                                                                />
-                                                            </svg>
-                                                        </div>
-                                                    </a>
-                                                </div>
-                                                <div class="about_cta-label is-left">
-                                                    <div class="icon-embed-xxsmall w-embed">
-                                                        <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 17 17" fill="none" preserveAspectRatio="xMidYMid meet" aria-hidden="true" role="img">
-                                                            <path
-                                                                fill-rule="evenodd"
-                                                                clip-rule="evenodd"
-                                                                d="M3.03541 2.33802C3.03541 1.97174 2.73848 1.6748 2.3722 1.6748C2.00592 1.6748 1.70898 1.97174 1.70898 2.33802V9.13017C1.70898 9.66404 1.70897 10.1047 1.7383 10.4636C1.76875 10.8364 1.83412 11.1791 1.99813 11.5009C2.25247 12.0001 2.6583 12.4059 3.15747 12.6603C3.47935 12.8243 3.82203 12.8897 4.19482 12.9201C4.55374 12.9494 4.99435 12.9494 5.52821 12.9494H9.75111C10.0456 14.0936 11.0843 14.9391 12.3204 14.9391C13.7855 14.9391 14.9732 13.7513 14.9732 12.2862C14.9732 10.8211 13.7855 9.63336 12.3204 9.63336C11.0843 9.63336 10.0456 10.4788 9.75111 11.623H5.55562C4.98752 11.623 4.60134 11.6225 4.30283 11.5981C4.01207 11.5743 3.86338 11.5313 3.75965 11.4784C3.51007 11.3513 3.30715 11.1483 3.17998 10.8988C3.12713 10.795 3.08407 10.6463 3.06031 10.3556C3.03593 10.0571 3.03541 9.67088 3.03541 9.10278V6.31729L9.75111 6.31729C10.0456 7.46148 11.0843 8.30693 12.3204 8.30693C13.7855 8.30693 14.9732 7.11921 14.9732 5.65408C14.9732 4.18895 13.7855 3.00123 12.3204 3.00123C11.0843 3.00123 10.0456 3.84668 9.75111 4.99087L3.03541 4.99087V2.33802Z"
-                                                                fill="currentColor"
-                                                            />
-                                                        </svg>
-                                                    </div>
-                                                    <p class="cta-label text-weight-normal text-size-tiny hide-mobile-portrait">Generate multiple passive income streams</p>
-                                                    <p class="cta-label text-weight-normal text-size-tiny hide-until-mobile-portrait">Generate passive income streams</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div id="w-node-_162be8bf-99e9-c858-3b02-8eb0f583053f-f583046a" class="benefit_norisk-grid-wrapper">
-                                            <img
-                                                src="https://assets-global.website-files.com/65bb13407635bdf5ce9f1131/65bca02485ad753b4d3fabd7_No%20Risk%20Visual.webp"
-                                                loading="lazy"
-                                                srcset="
-                                                    https://assets-global.website-files.com/65bb13407635bdf5ce9f1131/65bca02485ad753b4d3fabd7_No%20Risk%20Visual-p-500.webp   500w,
-                                                    https://assets-global.website-files.com/65bb13407635bdf5ce9f1131/65bca02485ad753b4d3fabd7_No%20Risk%20Visual-p-800.webp   800w,
-                                                    https://assets-global.website-files.com/65bb13407635bdf5ce9f1131/65bca02485ad753b4d3fabd7_No%20Risk%20Visual-p-1080.webp 1080w,
-                                                    https://assets-global.website-files.com/65bb13407635bdf5ce9f1131/65bca02485ad753b4d3fabd7_No%20Risk%20Visual-p-1600.webp 1600w,
-                                                    https://assets-global.website-files.com/65bb13407635bdf5ce9f1131/65bca02485ad753b4d3fabd7_No%20Risk%20Visual.webp        2000w
-                                                "
-                                                alt="Automating WiFi Systems"
-                                                sizes="(max-width: 767px) 100vw, (max-width: 991px) 24px, 44vw"
-                                                class="benefit_norisk-visual hide-mobile-landscape"
-                                            />
-                                            <img
-                                                src="https://assets-global.website-files.com/65bb13407635bdf5ce9f1131/65c205e7a2be2755159fcfc4_No%20Risk%20Visual%20-%20Mobile.webp"
-                                                loading="lazy"
-                                                srcset="
-                                                    https://assets-global.website-files.com/65bb13407635bdf5ce9f1131/65c205e7a2be2755159fcfc4_No%20Risk%20Visual%20-%20Mobile-p-500.webp  500w,
-                                                    https://assets-global.website-files.com/65bb13407635bdf5ce9f1131/65c205e7a2be2755159fcfc4_No%20Risk%20Visual%20-%20Mobile-p-800.webp  800w,
-                                                    https://assets-global.website-files.com/65bb13407635bdf5ce9f1131/65c205e7a2be2755159fcfc4_No%20Risk%20Visual%20-%20Mobile.webp       1000w
-                                                "
-                                                alt="Automating WiFi Systems"
-                                                sizes="100vw"
-                                                class="benefit_norisk-visual-mobile"
-                                            />
                                         </div>
                                     </div>
+
+
+
+
                                     <div class="spacer-xhuge"></div>
                                     <div class="benefit_feature-grid">
                                         <div id="w-node-_162be8bf-99e9-c858-3b02-8eb0f5830544-f583046a" class="benefit_feature-wrapper">
@@ -2773,7 +2401,122 @@ font-size: inherit;
                             <!-- <div class="padding-section-large"> -->
                             <div>
                                 <div class="content-wrapper">
-                                    <div class="margin-bottom margin-xlarge">
+                                    <div class="grid-component">
+                                        <div id="w-node-_162be8bf-99e9-c858-3b02-8eb0f5830525-f583046a" class="benefit_norisk_left">
+                                            <div class="margin-bottom margin-xmedium display-inlineflex">
+                                                <div class="tagline-wrapper">
+                                                    <div class="tagline-dot"></div>
+                                                    <p>Here’s The Best Part</p>
+                                                </div>
+                                            </div>
+                                            <div class="heading-best-wrapper margin-bottom margin-large"><h4>You Don’t Need To Risk Anything With WiFi Systems</h4></div>
+                                            <div class="benefit_norisk-grid">
+                                                <div id="w-node-_162be8bf-99e9-c858-3b02-8eb0f583052f-f583046a" class="benefit_norisk-item">
+                                                    <div class="icon-embed-xsmall text-color-brand w-embed">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" preserveAspectRatio="xMidYMid meet" aria-hidden="true" role="img">
+                                                            <path
+                                                                d="M18.4449 6.8375C18.8266 6.45579 18.8266 5.83693 18.4449 5.45522C18.0632 5.07352 17.4443 5.07352 17.0626 5.45522L11.8893 10.6286L6.71592 5.45522C6.33421 5.07352 5.71535 5.07352 5.33364 5.45522C4.95194 5.83693 4.95194 6.45579 5.33364 6.8375L10.507 12.0109L5.33364 17.1842C4.95194 17.5659 4.95194 18.1848 5.33364 18.5665C5.71535 18.9482 6.33421 18.9482 6.71592 18.5665L11.8893 13.3931L17.0626 18.5665C17.4443 18.9482 18.0632 18.9482 18.4449 18.5665C18.8266 18.1848 18.8266 17.5659 18.4449 17.1842L13.2715 12.0109L18.4449 6.8375Z"
+                                                                fill="currentColor"
+                                                            />
+                                                        </svg>
+                                                    </div>
+                                                    <p>No Face Reveal</p>
+                                                </div>
+                                                <div id="w-node-_162be8bf-99e9-c858-3b02-8eb0f5830533-f583046a" class="benefit_norisk-item">
+                                                    <div class="icon-embed-xsmall text-color-brand w-embed">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" preserveAspectRatio="xMidYMid meet" aria-hidden="true" role="img">
+                                                            <path
+                                                                d="M18.4449 6.8375C18.8266 6.45579 18.8266 5.83693 18.4449 5.45522C18.0632 5.07352 17.4443 5.07352 17.0626 5.45522L11.8893 10.6286L6.71592 5.45522C6.33421 5.07352 5.71535 5.07352 5.33364 5.45522C4.95194 5.83693 4.95194 6.45579 5.33364 6.8375L10.507 12.0109L5.33364 17.1842C4.95194 17.5659 4.95194 18.1848 5.33364 18.5665C5.71535 18.9482 6.33421 18.9482 6.71592 18.5665L11.8893 13.3931L17.0626 18.5665C17.4443 18.9482 18.0632 18.9482 18.4449 18.5665C18.8266 18.1848 18.8266 17.5659 18.4449 17.1842L13.2715 12.0109L18.4449 6.8375Z"
+                                                                fill="currentColor"
+                                                            />
+                                                        </svg>
+                                                    </div>
+                                                    <p>No Big Investment</p>
+                                                </div>
+                                                <div id="w-node-_162be8bf-99e9-c858-3b02-8eb0f5830537-f583046a" class="benefit_norisk-item">
+                                                    <div class="icon-embed-xsmall text-color-brand w-embed">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" preserveAspectRatio="xMidYMid meet" aria-hidden="true" role="img">
+                                                            <path
+                                                                d="M18.4449 6.8375C18.8266 6.45579 18.8266 5.83693 18.4449 5.45522C18.0632 5.07352 17.4443 5.07352 17.0626 5.45522L11.8893 10.6286L6.71592 5.45522C6.33421 5.07352 5.71535 5.07352 5.33364 5.45522C4.95194 5.83693 4.95194 6.45579 5.33364 6.8375L10.507 12.0109L5.33364 17.1842C4.95194 17.5659 4.95194 18.1848 5.33364 18.5665C5.71535 18.9482 6.33421 18.9482 6.71592 18.5665L11.8893 13.3931L17.0626 18.5665C17.4443 18.9482 18.0632 18.9482 18.4449 18.5665C18.8266 18.1848 18.8266 17.5659 18.4449 17.1842L13.2715 12.0109L18.4449 6.8375Z"
+                                                                fill="currentColor"
+                                                            />
+                                                        </svg>
+                                                    </div>
+                                                    <p>No Experience</p>
+                                                </div>
+                                                <div id="w-node-_162be8bf-99e9-c858-3b02-8eb0f583053b-f583046a" class="benefit_norisk-item">
+                                                    <div class="icon-embed-xsmall text-color-brand w-embed">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24" fill="none" preserveAspectRatio="xMidYMid meet" aria-hidden="true" role="img">
+                                                            <path
+                                                                d="M18.4449 6.8375C18.8266 6.45579 18.8266 5.83693 18.4449 5.45522C18.0632 5.07352 17.4443 5.07352 17.0626 5.45522L11.8893 10.6286L6.71592 5.45522C6.33421 5.07352 5.71535 5.07352 5.33364 5.45522C4.95194 5.83693 4.95194 6.45579 5.33364 6.8375L10.507 12.0109L5.33364 17.1842C4.95194 17.5659 4.95194 18.1848 5.33364 18.5665C5.71535 18.9482 6.33421 18.9482 6.71592 18.5665L11.8893 13.3931L17.0626 18.5665C17.4443 18.9482 18.0632 18.9482 18.4449 18.5665C18.8266 18.1848 18.8266 17.5659 18.4449 17.1842L13.2715 12.0109L18.4449 6.8375Z"
+                                                                fill="currentColor"
+                                                            />
+                                                        </svg>
+                                                    </div>
+                                                    <p>No Hard Work</p>
+                                                </div>
+                                            </div>
+                                            <div class="benefit_mid_cta-wrapper">
+                                                <div class="margin-bottom margin-12px">
+                                                    <a href="https://portal.wifiuniversity.co/offers/t9XmPrFG" class="button is-icon is-cta w-inline-block">
+                                                        <div>start your automation</div>
+                                                        <div class="icon-1x1-small w-embed">
+                                                            <svg aria-hidden="true" fill="currentColor" role="img" viewBox="0 0 56 56" xmlns="http://www.w3.org/2000/svg">
+                                                                <title>Arrow Right</title>
+                                                                <path
+                                                                    d="M16.0618 13.9785C14.7938 13.9785 13.7659 15.0064 13.7659 16.2745C13.7659 17.5425 14.7938 18.5704 16.0618 18.5704H33.4783L14.4383 37.6104C13.5417 38.507 13.5417 39.9607 14.4383 40.8573C15.335 41.7539 16.7887 41.7539 17.6853 40.8573L36.7252 21.8173V39.2338C36.7252 40.5018 37.7532 41.5298 39.0212 41.5298C40.2892 41.5298 41.3171 40.5018 41.3171 39.2338V16.2745C41.3171 15.0064 40.2892 13.9785 39.0212 13.9785H16.0618Z"
+                                                                />
+                                                            </svg>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="about_cta-label is-left">
+                                                    <div class="icon-embed-xxsmall w-embed">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 17 17" fill="none" preserveAspectRatio="xMidYMid meet" aria-hidden="true" role="img">
+                                                            <path
+                                                                fill-rule="evenodd"
+                                                                clip-rule="evenodd"
+                                                                d="M3.03541 2.33802C3.03541 1.97174 2.73848 1.6748 2.3722 1.6748C2.00592 1.6748 1.70898 1.97174 1.70898 2.33802V9.13017C1.70898 9.66404 1.70897 10.1047 1.7383 10.4636C1.76875 10.8364 1.83412 11.1791 1.99813 11.5009C2.25247 12.0001 2.6583 12.4059 3.15747 12.6603C3.47935 12.8243 3.82203 12.8897 4.19482 12.9201C4.55374 12.9494 4.99435 12.9494 5.52821 12.9494H9.75111C10.0456 14.0936 11.0843 14.9391 12.3204 14.9391C13.7855 14.9391 14.9732 13.7513 14.9732 12.2862C14.9732 10.8211 13.7855 9.63336 12.3204 9.63336C11.0843 9.63336 10.0456 10.4788 9.75111 11.623H5.55562C4.98752 11.623 4.60134 11.6225 4.30283 11.5981C4.01207 11.5743 3.86338 11.5313 3.75965 11.4784C3.51007 11.3513 3.30715 11.1483 3.17998 10.8988C3.12713 10.795 3.08407 10.6463 3.06031 10.3556C3.03593 10.0571 3.03541 9.67088 3.03541 9.10278V6.31729L9.75111 6.31729C10.0456 7.46148 11.0843 8.30693 12.3204 8.30693C13.7855 8.30693 14.9732 7.11921 14.9732 5.65408C14.9732 4.18895 13.7855 3.00123 12.3204 3.00123C11.0843 3.00123 10.0456 3.84668 9.75111 4.99087L3.03541 4.99087V2.33802Z"
+                                                                fill="currentColor"
+                                                            />
+                                                        </svg>
+                                                    </div>
+                                                    <p class="cta-label text-weight-normal text-size-tiny hide-mobile-portrait">Generate multiple passive income streams</p>
+                                                    <p class="cta-label text-weight-normal text-size-tiny hide-until-mobile-portrait">Generate passive income streams</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div id="w-node-_162be8bf-99e9-c858-3b02-8eb0f583053f-f583046a" class="benefit_norisk-grid-wrapper">
+                                            <img
+                                                src="https://assets-global.website-files.com/65bb13407635bdf5ce9f1131/65bca02485ad753b4d3fabd7_No%20Risk%20Visual.webp"
+                                                loading="lazy"
+                                                srcset="
+                                                    https://assets-global.website-files.com/65bb13407635bdf5ce9f1131/65bca02485ad753b4d3fabd7_No%20Risk%20Visual-p-500.webp   500w,
+                                                    https://assets-global.website-files.com/65bb13407635bdf5ce9f1131/65bca02485ad753b4d3fabd7_No%20Risk%20Visual-p-800.webp   800w,
+                                                    https://assets-global.website-files.com/65bb13407635bdf5ce9f1131/65bca02485ad753b4d3fabd7_No%20Risk%20Visual-p-1080.webp 1080w,
+                                                    https://assets-global.website-files.com/65bb13407635bdf5ce9f1131/65bca02485ad753b4d3fabd7_No%20Risk%20Visual-p-1600.webp 1600w,
+                                                    https://assets-global.website-files.com/65bb13407635bdf5ce9f1131/65bca02485ad753b4d3fabd7_No%20Risk%20Visual.webp        2000w
+                                                "
+                                                alt="Automating WiFi Systems"
+                                                sizes="(max-width: 767px) 100vw, (max-width: 991px) 24px, 44vw"
+                                                class="benefit_norisk-visual hide-mobile-landscape"
+                                            />
+                                            <img
+                                                src="https://assets-global.website-files.com/65bb13407635bdf5ce9f1131/65c205e7a2be2755159fcfc4_No%20Risk%20Visual%20-%20Mobile.webp"
+                                                loading="lazy"
+                                                srcset="
+                                                    https://assets-global.website-files.com/65bb13407635bdf5ce9f1131/65c205e7a2be2755159fcfc4_No%20Risk%20Visual%20-%20Mobile-p-500.webp  500w,
+                                                    https://assets-global.website-files.com/65bb13407635bdf5ce9f1131/65c205e7a2be2755159fcfc4_No%20Risk%20Visual%20-%20Mobile-p-800.webp  800w,
+                                                    https://assets-global.website-files.com/65bb13407635bdf5ce9f1131/65c205e7a2be2755159fcfc4_No%20Risk%20Visual%20-%20Mobile.webp       1000w
+                                                "
+                                                alt="Automating WiFi Systems"
+                                                sizes="100vw"
+                                                class="benefit_norisk-visual-mobile"
+                                            />
+                                        </div>
+                                    </div>
+                                 
+                                    <!-- <div class="margin-bottom margin-xlarge">
                                         <div class="title-grid is-system-section padding-horizontal padding-small">
                                             <div id="w-node-_2b6303c5-5c34-64c6-d8da-3e5577df8e7a-f583046a" class="title-relative-wrapper">
                                                 <div
@@ -2811,7 +2554,7 @@ font-size: inherit;
                                                 </p>
                                             </div>
                                         </div>
-                                    </div>
+                                    </div> -->
                                     <!-- <div class="system_intro-visual-wrapper">
                                         <img
                                             src="https://assets-global.website-files.com/65bb13407635bdf5ce9f1131/65bcce0b2b88fe75cb481fa1_Wifi%20Keyboard.webp"
