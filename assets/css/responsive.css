@@ -5072,6 +5072,9 @@ div#w-node-_2b6303c5-5c34-64c6-d8da-3e5577df8e7a-f583046a {
     margin: auto;
     text-align: center;
 }
+div#w-node-_162be8bf-99e9-c858-3b02-8eb0f583053f-f583046a{
+    height: auto !important;
+}
 .faq6_icon-wrapper {
     width: 2rem;
     align-self: center;
@@ -5352,7 +5355,7 @@ div#w-node-_2b6303c5-5c34-64c6-d8da-3e5577df8e7a-f583046a {
     grid-row-gap: 0rem;
     grid-template-rows: auto;
     grid-template-columns: 1fr;
-    grid-auto-columns: 1fr;
+    /* grid-auto-columns: 1fr; */
     grid-auto-flow: column;
     display: grid
 }
